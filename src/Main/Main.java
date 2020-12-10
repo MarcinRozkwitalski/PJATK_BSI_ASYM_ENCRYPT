@@ -2,6 +2,8 @@ package Main;
 
 
 
+import EncryptionPackage.Des.DesString;
+
 import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
 import java.io.File;
@@ -9,8 +11,10 @@ import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
+import java.util.Scanner;
 
 import static EncryptionPackage.Des.Des.encryption;
+import static EncryptionPackage.Des.DesString.encryptionOfString;
 
 public class Main {
     public static void main(String[] args) throws InvalidKeySpecException, NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, IOException {
@@ -29,5 +33,8 @@ public class Main {
         }catch (NoSuchAlgorithmException | InvalidKeySpecException | NoSuchPaddingException | IOException exception){
             exception.printStackTrace();
         }
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        encryptionOfString(input);
     }
 }
