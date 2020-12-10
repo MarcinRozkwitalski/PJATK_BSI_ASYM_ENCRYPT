@@ -13,6 +13,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Scanner;
 
+import static EncryptionPackage.BlowFish.BlowFish.BlowFishTest;
 import static EncryptionPackage.Des.Des.encryption;
 import static EncryptionPackage.Des.DesString.encryptionOfString;
 
@@ -36,5 +37,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         encryptionOfString(input);
+        input = scanner.nextLine();
+        BlowFishTest(input);
     }
 }
