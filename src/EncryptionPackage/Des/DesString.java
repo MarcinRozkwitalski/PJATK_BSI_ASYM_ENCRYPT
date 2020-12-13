@@ -5,9 +5,6 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 
 public class DesString {
-    public DesString() {
-    }
-
     public static void encryptionOfString(String input){
         try{
             KeyGenerator keyGenerator = KeyGenerator.getInstance("DES");
