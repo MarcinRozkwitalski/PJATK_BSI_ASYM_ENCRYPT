@@ -21,6 +21,7 @@ import javax.crypto.spec.DESKeySpec;
 // https://www.youtube.com/watch?v=zn_kg55GRWo&ab_channel=ZoranDavidovi%C4%87
 
 public class Des {
+
     public static void encryption(String key,int cipherMode,File in, File out)
             throws InvalidKeyException, NoSuchAlgorithmException,InvalidKeySpecException,NoSuchPaddingException,IOException
     {
@@ -54,5 +55,23 @@ public class Des {
         }
         out.close();
         in.close();
+    }
+
+    public static void desFileEncryption(){
+        File plaintext = new File("C:\\Moje pierdoły\\Materiały_PJWSTK_semestr_5\\BSI\\PJATK_BSI_ENCRYPTION\\src\\Files\\Text.txt");
+        File encrypted = new File("C:\\Moje pierdoły\\Materiały_PJWSTK_semestr_5\\BSI\\PJATK_BSI_ENCRYPTION\\src\\Files\\EncryptedText.txt");
+        File decrypted = new File("C:\\Moje pierdoły\\Materiały_PJWSTK_semestr_5\\BSI\\PJATK_BSI_ENCRYPTION\\src\\Files\\DecryptedText.txt");
+        try {
+            encryption("12345678", Cipher.ENCRYPT_MODE, plaintext, encrypted);
+            System.out.println("Encryption completed");
+        }catch (InvalidKeyException | NoSuchAlgorithmException | InvalidKeySpecException | NoSuchPaddingException | IOException exception){
+            exception.printStackTrace();
+        }
+        try {
+            encryption("12345678", Cipher.DECRYPT_MODE,encrypted,decrypted);
+            System.out.println("Decryption completed");
+        }catch (InvalidKeyException | NoSuchAlgorithmException | InvalidKeySpecException | NoSuchPaddingException | IOException exception){
+            exception.printStackTrace();
+        }
     }
 }

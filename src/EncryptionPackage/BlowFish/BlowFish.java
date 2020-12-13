@@ -40,10 +40,8 @@ public class BlowFish {
             Cipher cipher = Cipher.getInstance("BlowFish");
             cipher.init(Cipher.ENCRYPT_MODE,secretKey);
             byte[] text = input.getBytes();
-            System.out.println("Text in bytes: " + text);
             System.out.println("Text: " + new String(text));
             byte[] textEncrypted = cipher.doFinal(text);
-            System.out.println("Text in bytes: " + textEncrypted);
             System.out.println("Text Encrypted: " + new String(textEncrypted));
             cipher.init(Cipher.DECRYPT_MODE,secretKey);
             byte[] textDecrypted = cipher.doFinal(textEncrypted);
