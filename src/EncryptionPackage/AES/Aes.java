@@ -31,10 +31,7 @@ public class Aes {
             key = Arrays.copyOf(key, 16);
             secretKey = new SecretKeySpec(key, "AES");
         }
-        catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        catch (UnsupportedEncodingException e) {
+        catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
     }
@@ -71,7 +68,7 @@ public class Aes {
         return null;
     }
 
-    public static void DoEncrypt(){
+    public static void DoEncrypt() throws Exception {
         final String secretKey = "ssshhhhhhhhhhh!!!!";
         System.out.print("Input text to encrypt: ");
         Scanner scanner = new Scanner(System.in);
@@ -81,7 +78,7 @@ public class Aes {
         main();
     }
 
-    public static void DoDecrypt(){
+    public static void DoDecrypt() throws Exception {
         final String secretKey = "ssshhhhhhhhhhh!!!!";
         System.out.print("Input text to decrypt: ");
         Scanner scanner = new Scanner(System.in);
@@ -91,7 +88,7 @@ public class Aes {
         main();
     }
 
-    public static void main(){
+    public static void main() throws Exception {
         System.out.println("1. Encrypt\n2. Decrypt\n3. Exit algorithm");
         Scanner scanner = new Scanner(System.in);
         int option = scanner.nextInt();
