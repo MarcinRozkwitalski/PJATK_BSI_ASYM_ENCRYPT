@@ -17,8 +17,10 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
-
-// https://www.youtube.com/watch?v=zn_kg55GRWo&ab_channel=ZoranDavidovi%C4%87
+/*
+ Source: https://www.youtube.com/watch?v=zn_kg55GRWo&ab_channel=ZoranDavidovi%C4%87
+ Solved: Filip Trojanowski s20088
+*/
 
 public class Des {
 

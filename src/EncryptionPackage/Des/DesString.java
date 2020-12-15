@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Scanner;
 /* Source: https://gist.github.com/ufologist/5581496
-   Author: Filip Trojanowski s20088
+   Solved: Filip Trojanowski s20088
 * */
 
 public class DesString {

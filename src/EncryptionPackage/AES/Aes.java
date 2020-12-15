@@ -2,7 +2,7 @@ package EncryptionPackage.AES;
 
 /*
 Source: https://howtodoinjava.com/java/java-security/java-aes-encryption-example/
-Author: Marcin Rozkwitalski s19826
+Solved: Marcin Rozkwitalski s19826
  */
 
 import Main.Main;

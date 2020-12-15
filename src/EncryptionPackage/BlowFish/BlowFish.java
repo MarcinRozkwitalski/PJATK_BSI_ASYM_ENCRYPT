@@ -7,6 +7,10 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import java.util.Scanner;
 
+/* Source: https://www.youtube.com/watch?v=IhaQqbX6kLA&ab_channel=ProfessorSaad
+   Solved: Filip Trojanowski s20088
+* */
+
 public class BlowFish {
 
     public static void BlowFishTest(String input){
