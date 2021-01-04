@@ -21,6 +21,10 @@ public class Aes {
     private static SecretKeySpec secretKey;
     private static byte[] key;
 
+    /**
+     * Creates secret key depending on given key
+     * @param myKey key given by user
+     */
     public static void setKey(String myKey)
     {
         MessageDigest sha = null;
@@ -36,6 +40,12 @@ public class Aes {
         }
     }
 
+    /**
+     * Encrypts given string
+     * @param strToEncrypt string which will be encrypted
+     * @param secret secret key given by user
+     * @return returns encoded string
+     */
     public static String encrypt(String strToEncrypt, String secret)
     {
         try
@@ -52,6 +62,12 @@ public class Aes {
         return null;
     }
 
+    /**
+     * Decrypts given string
+     * @param strToDecrypt string which will be decrypted
+     * @param secret secret key given by user
+     * @return returns decrypted string of encrypted string
+     */
     public static String decrypt(String strToDecrypt, String secret)
     {
         try
