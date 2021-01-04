@@ -10,6 +10,7 @@ Authors: Filip Trojanowski s20088 and Marcin Rozkwitalski s19826
  */
 
 import EncryptionPackage.AES.Aes;
+import EncryptionPackage.Asymetric.DSA;
 import EncryptionPackage.Asymetric.RSA;
 import EncryptionPackage.BlowFish.BlowFish;
 import EncryptionPackage.Des.DesString;
@@ -52,7 +53,7 @@ public class Main {
 
                     case 5:
                         System.out.println("");
-
+                        DSA.main();
                         break;
 
                     case 6:

@@ -12,7 +12,7 @@ public class RSA {
          * Accepting text from user
          */
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter some text");
+        System.out.println("Enter some text (RSA)");
         String msg = sc.nextLine();
 
         /**
