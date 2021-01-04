@@ -1,11 +1,13 @@
 package EncryptionPackage.Asymetric;
 
+import Main.Main;
+
 import javax.crypto.Cipher;
 import java.security.*;
 import java.util.Scanner;
 
 public class RSA {
-    public static void main(String args[]) throws Exception{
+    public static void main() throws Exception{
 
         /**
          * Accepting text from user
@@ -76,5 +78,7 @@ public class RSA {
          */
         byte[] decipheredText = cipher.doFinal(cipherText);
         System.out.println("Decrypted text with private key : \n" + new String(decipheredText));
+
+        Main.TaskOptions();
     }
 }

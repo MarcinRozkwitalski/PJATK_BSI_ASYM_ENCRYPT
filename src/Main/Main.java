@@ -10,6 +10,7 @@ Authors: Filip Trojanowski s20088 and Marcin Rozkwitalski s19826
  */
 
 import EncryptionPackage.AES.Aes;
+import EncryptionPackage.Asymetric.RSA;
 import EncryptionPackage.BlowFish.BlowFish;
 import EncryptionPackage.Des.DesString;
 import java.util.Scanner;
@@ -21,7 +22,7 @@ public class Main {
     }
 
     public static void TaskOptions() throws Exception {
-        System.out.println("1. AES\n2. BlowFish\n3. DES\n4. Exit program");
+        System.out.println("1. AES\n2. BlowFish\n3. DES\n4. RSA\n5. DSA\n6. Exit program");
         System.out.print("Choose your algorithm: ");
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
@@ -42,6 +43,16 @@ public class Main {
                 break;
 
             case 4:
+                System.out.println("You chose RSA algorithm.");
+                RSA.main();
+                break;
+
+            case 5:
+                System.out.println("");
+
+                break;
+
+            case 6:
                 System.out.println("You are leaving the program.\nBye bye!");
                 break;
 
