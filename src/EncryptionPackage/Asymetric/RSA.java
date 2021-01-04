@@ -2,48 +2,79 @@ package EncryptionPackage.Asymetric;
 
 import javax.crypto.Cipher;
 import java.security.*;
+import java.util.Scanner;
 
 public class RSA {
     public static void main(String args[]) throws Exception{
-        //Creating a Signature object
+
+        /**
+         * Accepting text from user
+         */
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter some text");
+        String msg = sc.nextLine();
+
+        /**
+         * Creating a Signature object
+         */
         Signature sign = Signature.getInstance("SHA256withRSA");
 
-        //Creating KeyPair generator object
+        /**
+         * Creating KeyPair generator object
+         */
         KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance("RSA");
 
-        //Initializing the key pair generator
+        /**
+         * Initializing the key pair generator
+         */
         keyPairGen.initialize(2048);
 
-        //Generate the pair of keys
+        /**
+         * Generate the pair of keys
+         */
         KeyPair pair = keyPairGen.generateKeyPair();
 
-        //Getting the public key from the key pair
+        /**
+         * Getting the public key from the key pair
+         */
         PublicKey publicKey = pair.getPublic();
         PrivateKey privateKey = pair.getPrivate();
 
         System.out.println("Keys generated");
-        System.out.println("Private key : " + privateKey);
-        System.out.println("Public key : " + publicKey);
+        System.out.println("Private key : \n" + privateKey);
+        System.out.println("Public key : \n" + publicKey);
 
-        //Creating a Cipher object
+        /**
+         * Creating a Cipher object
+         */
         Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
 
-        //Initializing a Cipher object
+        /**
+         * Initializing a Cipher object
+         */
         cipher.init(Cipher.ENCRYPT_MODE, publicKey);
 
-        //Add data to the cipher
-        byte[] input = "Welcome to Tutorialspoint".getBytes();
+        /**
+         * Add data to the cipher
+         */
+        byte[] input = msg.getBytes();
         cipher.update(input);
 
-        //encrypting the data
+        /**
+         * encrypting the data
+         */
         byte[] cipherText = cipher.doFinal();
-        System.out.println( new String(cipherText, "UTF8"));
+        System.out.println( "Encrypted text with public key : \n" + new String(cipherText, "UTF8"));
 
-        //Initializing the same cipher for decryption
+        /**
+         * Initializing the same cipher for decryption
+         */
         cipher.init(Cipher.DECRYPT_MODE, pair.getPrivate());
 
-        //Decrypting the text
+        /**
+         * Decrypting the text
+         */
         byte[] decipheredText = cipher.doFinal(cipherText);
-        System.out.println(new String(decipheredText));
+        System.out.println("Decrypted text with private key : \n" + new String(decipheredText));
     }
 }
