@@ -19,20 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="145e109b-27a7-4941-b161-5c30d5df7fb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Encryption/EncryptionPackage/BlowFish/BlowFish.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Encryption/EncryptionPackage/BlowFish/BlowFish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Encryption/EncryptionPackage/Des/Des.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Encryption/EncryptionPackage/Des/Des.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EncryptionPackage/AES/Aes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EncryptionPackage/AES/Aes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EncryptionPackage/BlowFish/BlowFish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EncryptionPackage/BlowFish/BlowFish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EncryptionPackage/Des/Des.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EncryptionPackage/Des/Des.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EncryptionPackage/Des/DesString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EncryptionPackage/Des/DesString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EncryptionPackage/Empty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EncryptionPackage/Empty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Files/DecryptedText.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Files/DecryptedText.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Files/EncryptedText.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Files/EncryptedText.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Files/Text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Files/Text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="145e109b-27a7-4941-b161-5c30d5df7fb2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
