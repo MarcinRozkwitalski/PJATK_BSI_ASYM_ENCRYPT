@@ -120,7 +120,6 @@ public class Aes {
                 break;
             case 3:
                 System.out.println("You are leaving AES algorithm.");
-                Main.TaskOptions();
                 break;
             default:
                 System.out.println("This option doesn't exist.");

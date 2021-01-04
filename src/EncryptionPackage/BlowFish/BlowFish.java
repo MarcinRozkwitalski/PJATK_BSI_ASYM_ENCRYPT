@@ -27,15 +27,14 @@ public class BlowFish {
             byte[] textDecrypted = cipher.doFinal(textEncrypted);
             System.out.println("Text Decrypted: " + new String(textDecrypted));
 
-        }catch (Exception ignored){
-
+        }catch (Exception exception){
+            System.err.println("Error:"+exception.toString());
         }
     }
-    public static void main() throws Exception {
+    public static void main(){
         System.out.println("Give some text");
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         BlowFishTest(input);
-        Main.TaskOptions();
     }
 }

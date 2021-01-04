@@ -1,6 +1,5 @@
 package EncryptionPackage.Asymetric;
 
-import Main.Main;
 
 import javax.crypto.Cipher;
 import java.security.*;
@@ -79,6 +78,5 @@ public class RSA {
         byte[] decipheredText = cipher.doFinal(cipherText);
         System.out.println("Decrypted text with private key : \n" + new String(decipheredText));
 
-        Main.TaskOptions();
     }
 }

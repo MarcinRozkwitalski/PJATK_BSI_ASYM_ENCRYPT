@@ -1,6 +1,5 @@
 package EncryptionPackage.Des;
 
-import Main.Main;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -17,6 +16,11 @@ public class DesString {
     private Cipher encryptCipher = null;
     private Cipher decryptCipher = null;
 
+    /**
+     *
+     * @param key
+     * @throws Exception
+     */
     public DesString(SecretKey key) throws Exception {
         encryptCipher = Cipher.getInstance("DES");
         decryptCipher = Cipher.getInstance("DES");
@@ -28,6 +32,12 @@ public class DesString {
 
     }
 
+    /**
+     *
+     * @param unencryptedString is a string which will be encrypted in the method DoEncrypt
+     * @return The String of encrypted string which was given as a @param
+     * @throws Exception
+     */
     public String DoEncrypt (String unencryptedString) throws Exception  {
         byte[] unencryptedByteArray = unencryptedString.getBytes(StandardCharsets.UTF_8);
 
@@ -40,6 +50,12 @@ public class DesString {
         return new String(encodedBytes);
     }
 
+    /**
+     *
+     * @param encryptedString
+     * @return
+     * @throws Exception
+     */
     public String DoDecrypt(String encryptedString) throws Exception {
         // Encode bytes to base64 to get a string
         byte [] decodedBytes = Base64.getDecoder().decode(encryptedString.getBytes());
@@ -83,7 +99,6 @@ public class DesString {
                     break;
                 case 3:
                     System.out.println("You are leaving BlowFish algorithm.");
-                    Main.TaskOptions();
                     break;
                 default:
                     System.out.println("This option doesn't exist.");
