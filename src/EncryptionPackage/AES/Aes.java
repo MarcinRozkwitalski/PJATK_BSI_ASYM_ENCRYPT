@@ -5,7 +5,6 @@ Source: https://howtodoinjava.com/java/java-security/java-aes-encryption-example
 Solved: Marcin Rozkwitalski s19826
  */
 
-import Main.Main;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

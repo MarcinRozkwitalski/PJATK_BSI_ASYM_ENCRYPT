@@ -1,28 +1,30 @@
 package EncryptionPackage.Asymetric;
 
+
 import java.security.*;
 import java.util.Scanner;
-import javax.crypto.Cipher;
+
 /*
 links of used sources :
 https://www.tutorialspoint.com/java_cryptography/java_cryptography_keypairgenerator.htm
-*
-*
-*
-* */
+
+Solution for DSA algorithm, the purpose of this algorithm was to create public and private key.
+We have only done signature in this algorithm because we can not do encryption and decryption.
+
+Solved by: Filip Trojanowski s20088 & Marcin Rozkwitalski s19826
+
+ */
+
 public class DSA{
+
     public static void main() throws Exception{
 
-        /**
-         * Accepting text from user
-         */
+        //Accepting text from user
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter some text (DSA)");
         String msg = sc.nextLine();
 
-        /**
-         * Creating KeyPair generator object
-         */
+        //Creating KeyPair generator object
         KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance("DSA");
 
         //Initializing the key pair generator
@@ -70,19 +72,5 @@ public class DSA{
             System.out.println("Signature failed");
         }
 
-// NOT WORKING FOR DSA ....
-//        //Creating a Cipher object
-//        Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-//
-//        //Initializing a Cipher object
-//        cipher.init(Cipher.ENCRYPT_MODE, pair.getPublic());
-//
-//        //Adding data to the cipher
-//        byte[] input = "Welcome to Tutorialspoint".getBytes();
-//        cipher.update(input);
-//
-//        //encrypting the data
-//        byte[] cipherText = cipher.doFinal();
-//        System.out.println(new String(cipherText, "UTF8"));
     }
 }

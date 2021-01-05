@@ -18,7 +18,7 @@ public class DesString {
 
     /**
      *
-     * @param key
+     * @param key generated secret key depending on password
      * @throws Exception
      */
     public DesString(SecretKey key) throws Exception {
@@ -52,8 +52,8 @@ public class DesString {
 
     /**
      *
-     * @param encryptedString
-     * @return
+     * @param encryptedString is a string which will be decrypted in the method DoDecrypt
+     * @return The String of decrypted string which was given as a @param
      * @throws Exception
      */
     public String DoDecrypt(String encryptedString) throws Exception {

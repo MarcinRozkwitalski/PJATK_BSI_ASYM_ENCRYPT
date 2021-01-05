@@ -1,7 +1,5 @@
 package EncryptionPackage.BlowFish;
 
-import Main.Main;
-
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
@@ -13,6 +11,10 @@ import java.util.Scanner;
 
 public class BlowFish {
 
+    /**
+     *
+     * @param input Message read from user which will be encrypted and decrypted
+     */
     public static void BlowFishTest(String input){
         try{
             KeyGenerator keyGenerator = KeyGenerator.getInstance("BlowFish");

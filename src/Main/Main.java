@@ -52,7 +52,7 @@ public class Main {
                         break;
 
                     case 5:
-                        System.out.println("");
+                        System.out.println("You chose DSA algorithm");
                         DSA.main();
                         break;
 
