@@ -2,7 +2,7 @@
 
 This repository is an extension of https://github.com/MarcinRozkwitalski/PJATK_BSI_ENCRYPTION
 
-It has been extended by two asymmetric algorithms: RSA & DSA
+It has been extended by two asymmetric algorithms: RSA & DSA.
 
 # RSA
 Rivest–Shamir–Adleman. The RSA algorithm involves four steps: key generation, key distribution, encryption, and decryption.
